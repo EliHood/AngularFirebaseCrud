@@ -1,0 +1,26 @@
+<h1 class="display-4">Create Board/Firebase Example</h1>
+  <form class="example-form" #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+
+    <div *ngIf="title.invalid && title.touched" class="validation-error">This field is required.</div>
+    <mat-form-field class="example-full-width">
+      <input matInput name="title" #title="ngModel" [(ngModel)]="service.formData.title" placeholder="Title" required>
+    </mat-form-field >
+
+    <div *ngIf="author.invalid && title.touched" class="validation-error">This field is required.</div>
+    <mat-form-field class="example-full-width">
+      <input matInput name="author" #author="ngModel" [(ngModel)]="service.formData.author"  placeholder="Author"  required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea matInput name="description" #description="ngModel" [(ngModel)]="service.formData.description" placeholder="Description"></textarea>
+    </mat-form-field>
+
+    <button type="button" class="btn btn-default" (click)="resetForm(employeeForm)">
+      <i class="fa fa-repeat"></i> Reset</button>
+
+    <div class="form-group">
+      <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
+    </div>
+
+  </form>
+

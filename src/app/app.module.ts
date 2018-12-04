@@ -1,16 +1,63 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { BoardsComponent } from './boards/boards.component';
+import { BoardsCreateComponent } from './boards-create/boards-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { BoardService } from './board.service';
+import {
+  MatInputModule,
+  MatListModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule,
+  MatIconModule,
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule } from "@angular/material";
+  
+import { BoardListComponent } from './board-list/board-list.component';
+
+
+
+const config = {
+  apiKey: "AIzaSyBA86qnfGS3h9sNcwvRHDG1v_O0GxdBYE4",
+  authDomain: "eliapi11-b3583.firebaseapp.com",
+  databaseURL: "https://eliapi11-b3583.firebaseio.com",
+  projectId: "eliapi11-b3583",
+  storageBucket: "eliapi11-b3583.appspot.com",
+};
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoardsComponent,
+    BoardsCreateComponent,
+    BoardListComponent
   ],
   imports: [
-    BrowserModule
+    AngularFireModule.initializeApp(config),
+     BrowserModule,
+     FormsModule,
+     MatListModule,
+     ReactiveFormsModule,
+     MatInputModule,
+     MatTableModule,
+     MatPaginatorModule,
+     MatSortModule,
+     MatProgressSpinnerModule,
+     MatIconModule,
+     MatButtonModule,
+     MatCardModule,
+     MatFormFieldModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

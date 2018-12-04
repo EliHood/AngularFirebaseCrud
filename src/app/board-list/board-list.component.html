@@ -1,0 +1,19 @@
+<div class="container ">
+    <div class="row">
+      <div *ngFor="let board of list" class="col-md-8 myCenter mt-2"> 
+        <!-- the bottom code should work if items within list exist. -->
+        <div class="card">
+          <div class="card-header">
+              Title: {{board.title}}
+              <a href="#" class="secondary-content float-right">
+                  <i (click)="deleteBoard($event, board)" class="fa fa-trash"></i>
+              </a>
+          </div>
+          <div class="card-body">
+            <p>{{board.description}}</p>
+            <small>Author: {{board.author}}</small>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
