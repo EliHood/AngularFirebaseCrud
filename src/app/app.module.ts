@@ -25,7 +25,7 @@ import { BoardListComponent } from './board-list/board-list.component';
 
 
 const config = {
-  apiKey: "*********"",
+  apiKey: "*********",
   authDomain: "*********",
   databaseURL: "*********",
   projectId: "*********",
