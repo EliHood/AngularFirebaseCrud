@@ -19,17 +19,17 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule } from "@angular/material";
-  
+
 import { BoardListComponent } from './board-list/board-list.component';
 
 
 
 const config = {
-  apiKey: "AIzaSyBA86qnfGS3h9sNcwvRHDG1v_O0GxdBYE4",
-  authDomain: "eliapi11-b3583.firebaseapp.com",
-  databaseURL: "https://eliapi11-b3583.firebaseio.com",
-  projectId: "eliapi11-b3583",
-  storageBucket: "eliapi11-b3583.appspot.com",
+  apiKey: "*********"",
+  authDomain: "*********",
+  databaseURL: "*********",
+  projectId: "*********",
+  storageBucket: "*********",
 };
 
 
