@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+
+  angularcrud-service:
+    container_name: angularfirebasecrud-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '4200:4200'
